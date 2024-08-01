@@ -12,28 +12,28 @@
         <meta name="author" content="Domenez-dev">
       
       
-        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/introduction/">
+        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/advanced-techniques/API-Security/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../Rate-Limiting-and-Throttling/">
       
       
-        <link rel="next" href="../core-concepts/security/">
+        <link rel="next" href="../Advanced-Logging-and-Monitoring/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Introduction - Web Security Using Django</title>
+        <title>API Security - Web Security Using Django</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-security-using-django" class="md-skip">
+        <a href="#api-security" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              API Security
             
           </span>
         </div>
@@ -221,9 +221,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     Web Security Using Django
@@ -238,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -255,30 +255,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,146 +267,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
-    <span class="md-ellipsis">
-      Home Page Article
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Home Page Article">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Understanding Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -475,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/security/" class="md-nav__link">
+      <a href="../../core-concepts/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/web%20apps/" class="md-nav__link">
+      <a href="../../core-concepts/web%20apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/overview/" class="md-nav__link">
+      <a href="../../core-concepts/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/importance/" class="md-nav__link">
+      <a href="../../core-concepts/importance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/sql-injection/" class="md-nav__link">
+      <a href="../../django-security/sql-injection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -624,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/xss/" class="md-nav__link">
+      <a href="../../django-security/xss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csrf/" class="md-nav__link">
+      <a href="../../django-security/csrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/password-storage/" class="md-nav__link">
+      <a href="../../django-security/password-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/https/" class="md-nav__link">
+      <a href="../../django-security/https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csp/" class="md-nav__link">
+      <a href="../../django-security/csp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/logging/" class="md-nav__link">
+      <a href="../../django-security/logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/misconfiguration/" class="md-nav__link">
+      <a href="../../django-security/misconfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -815,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/general-security-practices/" class="md-nav__link">
+      <a href="../../best-practices/general-security-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/secure-coding-practices/" class="md-nav__link">
+      <a href="../../best-practices/secure-coding-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/authentication-authorization/" class="md-nav__link">
+      <a href="../../best-practices/authentication-authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/data-protection/" class="md-nav__link">
+      <a href="../../best-practices/data-protection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/configuration-deployment/" class="md-nav__link">
+      <a href="../../best-practices/configuration-deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/network-security/" class="md-nav__link">
+      <a href="../../best-practices/network-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/monitoring-logging/" class="md-nav__link">
+      <a href="../../best-practices/monitoring-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/third-party-dependencies/" class="md-nav__link">
+      <a href="../../best-practices/third-party-dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/performance-scalability/" class="md-nav__link">
+      <a href="../../best-practices/performance-scalability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/user-education-awareness/" class="md-nav__link">
+      <a href="../../best-practices/user-education-awareness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/compliance-legal/" class="md-nav__link">
+      <a href="../../best-practices/compliance-legal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,19 +890,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1076,7 +916,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Advanced Techniques
@@ -1090,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/custom-middleware-security/" class="md-nav__link">
+      <a href="../custom-middleware-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/advanced-authentication/" class="md-nav__link">
+      <a href="../advanced-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/rbac/" class="md-nav__link">
+      <a href="../rbac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Rate-Limiting-and-Throttling/" class="md-nav__link">
+      <a href="../Rate-Limiting-and-Throttling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1171,10 +1011,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../advanced-techniques/API-Security/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API Security
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1183,6 +1043,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#securing-django-rest-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Securing Django REST APIs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Securing Django REST APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing-token-based-authentication-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing Token-Based Authentication (JWT)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-api-gateways-and-rate-limiting-for-api-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using API Gateways and Rate Limiting for API Protection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using API Gateways and Rate Limiting for API Protection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementing-an-api-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing an API Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-using-kong-api-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Using Kong API Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1195,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Advanced-Logging-and-Monitoring/" class="md-nav__link">
+      <a href="../Advanced-Logging-and-Monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/SIEM/" class="md-nav__link">
+      <a href="../SIEM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/" class="md-nav__link">
+      <a href="../../case-studies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../author/" class="md-nav__link">
+      <a href="../../author/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,83 +1270,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
+  <a href="#securing-django-rest-apis" class="md-nav__link">
     <span class="md-ellipsis">
-      Home Page Article
+      Securing Django REST APIs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Home Page Article">
+    <nav class="md-nav" aria-label="Securing Django REST APIs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
+  <a href="#implementing-token-based-authentication-jwt" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Understanding Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
+      Implementing Token-Based Authentication (JWT)
     </span>
   </a>
   
@@ -1410,36 +1292,46 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#using-api-gateways-and-rate-limiting-for-api-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using API Gateways and Rate Limiting for API Protection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using API Gateways and Rate Limiting for API Protection">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
+  <a href="#implementing-an-api-gateway" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
+      Implementing an API Gateway
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#example-using-kong-api-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Using Kong API Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1458,46 +1350,129 @@
                   
 
 
-<h1 id="web-security-using-django">Web Security Using Django<a class="headerlink" href="#web-security-using-django" title="Permanent link">&para;</a></h1>
-<h2 id="home-page-article">Home Page Article<a class="headerlink" href="#home-page-article" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="introduction-to-web-security">Introduction to Web Security<a class="headerlink" href="#introduction-to-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security is a critical aspect of modern web development. As cyber threats become increasingly sophisticated, it is essential to safeguard your web applications against a wide range of vulnerabilities. Django, a high-level Python web framework, provides robust security features out of the box, making it an excellent choice for developers aiming to build secure web applications.</p>
-<h3 id="understanding-web-security">Understanding Web Security<a class="headerlink" href="#understanding-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security involves protecting websites and web applications from cyber attacks that aim to steal data, compromise functionality, or cause other forms of harm. Common threats include SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and security misconfigurations. By addressing these vulnerabilities, developers can ensure the integrity, confidentiality, and availability of their web applications.</p>
-<h3 id="django-a-secure-framework">Django: A Secure Framework<a class="headerlink" href="#django-a-secure-framework" title="Permanent link">&para;</a></h3>
-<p>Django is designed with security in mind. It offers various built-in tools and best practices to help developers secure their applications effectively. Here are some of the key security features provided by Django:</p>
-<h4 id="1-sql-injection-protection">1. SQL Injection Protection<a class="headerlink" href="#1-sql-injection-protection" title="Permanent link">&para;</a></h4>
-<p>Django's ORM (Object-Relational Mapping) automatically escapes SQL queries, preventing SQL injection attacks. This ensures that user inputs do not corrupt or manipulate the database.</p>
-<h4 id="2-cross-site-scripting-xss-protection">2. Cross-Site Scripting (XSS) Protection<a class="headerlink" href="#2-cross-site-scripting-xss-protection" title="Permanent link">&para;</a></h4>
-<p>Django templates escape special characters by default, mitigating the risk of XSS attacks. This prevents malicious scripts from being injected into web pages viewed by other users.</p>
-<h4 id="3-cross-site-request-forgery-csrf-protection">3. Cross-Site Request Forgery (CSRF) Protection<a class="headerlink" href="#3-cross-site-request-forgery-csrf-protection" title="Permanent link">&para;</a></h4>
-<p>Django includes middleware that helps protect against CSRF attacks. It requires a secret token to be included in forms, ensuring that unauthorized commands are not executed.</p>
-<h4 id="4-secure-password-storage">4. Secure Password Storage<a class="headerlink" href="#4-secure-password-storage" title="Permanent link">&para;</a></h4>
-<p>Django uses a robust hashing algorithm (PBKDF2) to store passwords securely. This makes it difficult for attackers to retrieve plain-text passwords, even if they gain access to the database.</p>
-<h4 id="5-https-support">5. HTTPS Support<a class="headerlink" href="#5-https-support" title="Permanent link">&para;</a></h4>
-<p>Django makes it easy to enforce HTTPS, ensuring that data transmitted between the server and clients is encrypted and secure from eavesdropping and tampering.</p>
-<h3 id="best-practices-for-enhancing-django-security">Best Practices for Enhancing Django Security<a class="headerlink" href="#best-practices-for-enhancing-django-security" title="Permanent link">&para;</a></h3>
-<p>While Django provides a solid foundation for web security, developers must also follow best practices to enhance the security of their applications:</p>
-<ul>
-<li><strong>Regularly Update Django:</strong> Keep your Django installation up-to-date to benefit from the latest security patches and improvements.</li>
-<li><strong>Use Strong Passwords:</strong> Enforce strong password policies to prevent unauthorized access.</li>
-<li><strong>Validate User Input:</strong> Always validate and sanitize user inputs to avoid common security vulnerabilities.</li>
-<li><strong>Use Secure Settings:</strong> Ensure that sensitive settings (e.g., SECRET_KEY, DEBUG) are configured correctly, especially in production environments.</li>
-<li><strong>Monitor and Audit:</strong> Regularly monitor your application for security vulnerabilities and conduct audits to identify potential risks.</li>
-</ul>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>Building secure web applications is crucial in today’s digital landscape. Django, with its comprehensive security features and best practices, empowers developers to create robust and secure web applications. By leveraging Django's built-in tools and following security best practices, you can protect your web applications from common threats and ensure a safe experience for your users.</p>
-<hr />
-<h3 id="learn-more">Learn More<a class="headerlink" href="#learn-more" title="Permanent link">&para;</a></h3>
-<p>To delve deeper into Django's security features and best practices, explore the following sections:</p>
-<ul>
-<li><a href="../core-concepts/security/">Django Security Overview</a></li>
-<li><a href="../best-practices/secure-coding-practices/">Configuring Secure Settings in Django</a></li>
-<li><a href="../best-practices/general-security-practices/">Best Practices for Secure Django Development</a></li>
-<li><a href="../advanced-techniques/custom-middleware-security/">Advanced Security Techniques</a></li>
-</ul>
-<p>By continuously enhancing your knowledge and staying vigilant, you can build web applications that are both powerful and secure.</p>
+<h1 id="api-security">API Security<a class="headerlink" href="#api-security" title="Permanent link">&para;</a></h1>
+<p>Securing your APIs is crucial to protect sensitive data and ensure the integrity of your web application. This section covers various techniques for securing Django REST APIs, including token-based authentication, API gateways, and rate limiting.</p>
+<h2 id="securing-django-rest-apis">Securing Django REST APIs<a class="headerlink" href="#securing-django-rest-apis" title="Permanent link">&para;</a></h2>
+<p>Django REST Framework (DRF) provides tools and best practices to secure your APIs effectively.</p>
+<h3 id="implementing-token-based-authentication-jwt">Implementing Token-Based Authentication (JWT)<a class="headerlink" href="#implementing-token-based-authentication-jwt" title="Permanent link">&para;</a></h3>
+<p>JSON Web Tokens (JWT) are a popular method for securing APIs, providing a secure way to transmit information between parties as a JSON object.</p>
+<ol>
+<li><strong>Install Django REST Framework JWT</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>djangorestframework-simplejwt
+</code></pre></div>
+<ol>
+<li><strong>Configure JWT Settings</strong></li>
+</ol>
+<p>Add <code>rest_framework_simplejwt</code> to your <code>INSTALLED_APPS</code> and configure the JWT settings in <code>settings.py</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Other apps...</span>
+    <span class="s1">&#39;rest_framework&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;rest_framework_simplejwt&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;DEFAULT_AUTHENTICATION_CLASSES&#39;</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s1">&#39;rest_framework_simplejwt.authentication.JWTAuthentication&#39;</span><span class="p">,</span>
+    <span class="p">),</span>
+<span class="p">}</span>
+
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
+
+<span class="n">SIMPLE_JWT</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;ACCESS_TOKEN_LIFETIME&#39;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+    <span class="s1">&#39;REFRESH_TOKEN_LIFETIME&#39;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+    <span class="s1">&#39;ROTATE_REFRESH_TOKENS&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;BLACKLIST_AFTER_ROTATION&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;ALGORITHM&#39;</span><span class="p">:</span> <span class="s1">&#39;HS256&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;SIGNING_KEY&#39;</span><span class="p">:</span> <span class="n">SECRET_KEY</span><span class="p">,</span>
+    <span class="s1">&#39;VERIFYING_KEY&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="s1">&#39;AUDIENCE&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="s1">&#39;ISSUER&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="s1">&#39;AUTH_HEADER_TYPES&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;Bearer&#39;</span><span class="p">,),</span>
+    <span class="s1">&#39;USER_ID_FIELD&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;USER_ID_CLAIM&#39;</span><span class="p">:</span> <span class="s1">&#39;user_id&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;AUTH_TOKEN_CLASSES&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;rest_framework_simplejwt.tokens.AccessToken&#39;</span><span class="p">,),</span>
+    <span class="s1">&#39;TOKEN_TYPE_CLAIM&#39;</span><span class="p">:</span> <span class="s1">&#39;token_type&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;JTI_CLAIM&#39;</span><span class="p">:</span> <span class="s1">&#39;jti&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;SLIDING_TOKEN_REFRESH_EXP_CLAIM&#39;</span><span class="p">:</span> <span class="s1">&#39;refresh_exp&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;SLIDING_TOKEN_LIFETIME&#39;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">5</span><span class="p">),</span>
+    <span class="s1">&#39;SLIDING_TOKEN_REFRESH_LIFETIME&#39;</span><span class="p">:</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><strong>Create JWT Views</strong></li>
+</ol>
+<p>Create views for obtaining and refreshing JWT tokens.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">rest_framework_simplejwt.views</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">TokenObtainPairView</span><span class="p">,</span>
+    <span class="n">TokenRefreshView</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/token/&#39;</span><span class="p">,</span> <span class="n">TokenObtainPairView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;token_obtain_pair&#39;</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/token/refresh/&#39;</span><span class="p">,</span> <span class="n">TokenRefreshView</span><span class="o">.</span><span class="n">as_view</span><span class="p">(),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;token_refresh&#39;</span><span class="p">),</span>
+<span class="p">]</span>
+</code></pre></div>
+<ol>
+<li><strong>Protect API Endpoints</strong></li>
+</ol>
+<p>Use JWT authentication to protect your API endpoints.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">rest_framework.permissions</span> <span class="kn">import</span> <span class="n">IsAuthenticated</span>
+<span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+<span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+
+<span class="k">class</span> <span class="nc">SecureEndpoint</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">IsAuthenticated</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Response</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;This is a secure endpoint.&#39;</span><span class="p">})</span>
+</code></pre></div>
+<h2 id="using-api-gateways-and-rate-limiting-for-api-protection">Using API Gateways and Rate Limiting for API Protection<a class="headerlink" href="#using-api-gateways-and-rate-limiting-for-api-protection" title="Permanent link">&para;</a></h2>
+<p>API gateways and rate limiting provide additional layers of security by controlling and monitoring traffic to your APIs.</p>
+<h3 id="implementing-an-api-gateway">Implementing an API Gateway<a class="headerlink" href="#implementing-an-api-gateway" title="Permanent link">&para;</a></h3>
+<p>An API gateway acts as a reverse proxy, managing and routing API requests. Tools like Kong, Tyk, and AWS API Gateway offer robust features for securing and managing APIs.</p>
+<ol>
+<li><strong>Set Up an API Gateway</strong></li>
+</ol>
+<p>Choose an API gateway solution and configure it to route traffic to your Django application.</p>
+<ol>
+<li><strong>Configure Security Policies</strong></li>
+</ol>
+<p>Use the API gateway to enforce security policies, such as:
+   - Authentication and authorization
+   - Rate limiting and throttling
+   - IP whitelisting and blacklisting
+   - SSL/TLS termination</p>
+<h3 id="example-using-kong-api-gateway">Example: Using Kong API Gateway<a class="headerlink" href="#example-using-kong-api-gateway" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Install Kong</strong></li>
+</ol>
+<p>Follow the official <a href="https://docs.konghq.com/install/">Kong installation guide</a> to set up Kong.</p>
+<ol>
+<li><strong>Configure Services and Routes</strong></li>
+</ol>
+<p>Define your Django application as a service and create routes to expose your API endpoints.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Define a service</span>
+curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="nv">name</span><span class="o">=</span>my-django-service<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="nv">url</span><span class="o">=</span>http://your-django-app:8000
+
+<span class="c1"># Create a route</span>
+curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/my-django-service/routes<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="nv">paths</span><span class="o">=</span>/api/
+</code></pre></div>
+<ol>
+<li><strong>Add Security Plugins</strong></li>
+</ol>
+<p>Use Kong plugins to add security features like authentication and rate limiting.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Enable rate limiting</span>
+curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8001/services/my-django-service/plugins<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="nv">name</span><span class="o">=</span>rate-limiting<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span>config.second<span class="o">=</span><span class="m">5</span>
+</code></pre></div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Securing your Django APIs involves multiple layers of protection, including token-based authentication, API gateways, and rate limiting. Implementing these techniques helps to safeguard your application from unauthorized access, abuse, and other security threats. By following best practices and leveraging tools like Django REST Framework and API gateways, you can ensure robust API security.</p>
 
 
 
@@ -1552,10 +1527,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

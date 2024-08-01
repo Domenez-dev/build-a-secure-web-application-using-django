@@ -12,28 +12,28 @@
         <meta name="author" content="Domenez-dev">
       
       
-        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/introduction/">
+        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/best-practices/third-party-dependencies/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../monitoring-logging/">
       
       
-        <link rel="next" href="../core-concepts/security/">
+        <link rel="next" href="../performance-scalability/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Introduction - Web Security Using Django</title>
+        <title>third party dependencies - Web Security Using Django</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-security-using-django" class="md-skip">
+        <a href="#third-party-dependencies-best-practices" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              third party dependencies
             
           </span>
         </div>
@@ -221,9 +221,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     Web Security Using Django
@@ -238,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -255,30 +255,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,146 +267,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
-    <span class="md-ellipsis">
-      Home Page Article
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Home Page Article">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Understanding Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -475,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/security/" class="md-nav__link">
+      <a href="../../core-concepts/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/web%20apps/" class="md-nav__link">
+      <a href="../../core-concepts/web%20apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/overview/" class="md-nav__link">
+      <a href="../../core-concepts/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/importance/" class="md-nav__link">
+      <a href="../../core-concepts/importance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/sql-injection/" class="md-nav__link">
+      <a href="../../django-security/sql-injection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -624,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/xss/" class="md-nav__link">
+      <a href="../../django-security/xss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csrf/" class="md-nav__link">
+      <a href="../../django-security/csrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/password-storage/" class="md-nav__link">
+      <a href="../../django-security/password-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/https/" class="md-nav__link">
+      <a href="../../django-security/https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csp/" class="md-nav__link">
+      <a href="../../django-security/csp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/logging/" class="md-nav__link">
+      <a href="../../django-security/logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/misconfiguration/" class="md-nav__link">
+      <a href="../../django-security/misconfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,19 +615,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -801,7 +641,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Best Practices
@@ -815,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/general-security-practices/" class="md-nav__link">
+      <a href="../general-security-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/secure-coding-practices/" class="md-nav__link">
+      <a href="../secure-coding-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/authentication-authorization/" class="md-nav__link">
+      <a href="../authentication-authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/data-protection/" class="md-nav__link">
+      <a href="../data-protection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/configuration-deployment/" class="md-nav__link">
+      <a href="../configuration-deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/network-security/" class="md-nav__link">
+      <a href="../network-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/monitoring-logging/" class="md-nav__link">
+      <a href="../monitoring-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,10 +799,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../best-practices/third-party-dependencies/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    third party dependencies
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -971,6 +831,191 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependency Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-dependency-management-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Dependency Management Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependency Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regularly-update-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regularly Update Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerability-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerability Scanning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Isolation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependency Isolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-virtual-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Virtual Environments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-configuration-of-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Configuration of Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secure Configuration of Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-trusted-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Trusted Sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-package-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify Package Integrity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditing-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditing and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auditing and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-audits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Audits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licensing-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licensing Compliance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -983,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/performance-scalability/" class="md-nav__link">
+      <a href="../performance-scalability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/user-education-awareness/" class="md-nav__link">
+      <a href="../user-education-awareness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/compliance-legal/" class="md-nav__link">
+      <a href="../compliance-legal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/custom-middleware-security/" class="md-nav__link">
+      <a href="../../advanced-techniques/custom-middleware-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/advanced-authentication/" class="md-nav__link">
+      <a href="../../advanced-techniques/advanced-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/rbac/" class="md-nav__link">
+      <a href="../../advanced-techniques/rbac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Rate-Limiting-and-Throttling/" class="md-nav__link">
+      <a href="../../advanced-techniques/Rate-Limiting-and-Throttling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/API-Security/" class="md-nav__link">
+      <a href="../../advanced-techniques/API-Security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1195,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Advanced-Logging-and-Monitoring/" class="md-nav__link">
+      <a href="../../advanced-techniques/Advanced-Logging-and-Monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/SIEM/" class="md-nav__link">
+      <a href="../../advanced-techniques/SIEM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/" class="md-nav__link">
+      <a href="../../case-studies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../author/" class="md-nav__link">
+      <a href="../../author/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,83 +1369,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
+  <a href="#dependency-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Home Page Article
+      Dependency Management
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Home Page Article">
+    <nav class="md-nav" aria-label="Dependency Management">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
+  <a href="#use-dependency-management-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Web Security
+      Use Dependency Management Tools
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
+  <a href="#pin-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
+      Pin Dependencies
     </span>
   </a>
   
@@ -1410,36 +1400,136 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Security
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependency Security">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
+  <a href="#regularly-update-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
+      Regularly Update Dependencies
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#vulnerability-scanning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerability Scanning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dependency Isolation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dependency Isolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-virtual-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Virtual Environments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-configuration-of-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secure Configuration of Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secure Configuration of Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-trusted-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Trusted Sources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-package-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify Package Integrity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auditing-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auditing and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auditing and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-audits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Audits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#licensing-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licensing Compliance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1458,46 +1548,174 @@
                   
 
 
-<h1 id="web-security-using-django">Web Security Using Django<a class="headerlink" href="#web-security-using-django" title="Permanent link">&para;</a></h1>
-<h2 id="home-page-article">Home Page Article<a class="headerlink" href="#home-page-article" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="introduction-to-web-security">Introduction to Web Security<a class="headerlink" href="#introduction-to-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security is a critical aspect of modern web development. As cyber threats become increasingly sophisticated, it is essential to safeguard your web applications against a wide range of vulnerabilities. Django, a high-level Python web framework, provides robust security features out of the box, making it an excellent choice for developers aiming to build secure web applications.</p>
-<h3 id="understanding-web-security">Understanding Web Security<a class="headerlink" href="#understanding-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security involves protecting websites and web applications from cyber attacks that aim to steal data, compromise functionality, or cause other forms of harm. Common threats include SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and security misconfigurations. By addressing these vulnerabilities, developers can ensure the integrity, confidentiality, and availability of their web applications.</p>
-<h3 id="django-a-secure-framework">Django: A Secure Framework<a class="headerlink" href="#django-a-secure-framework" title="Permanent link">&para;</a></h3>
-<p>Django is designed with security in mind. It offers various built-in tools and best practices to help developers secure their applications effectively. Here are some of the key security features provided by Django:</p>
-<h4 id="1-sql-injection-protection">1. SQL Injection Protection<a class="headerlink" href="#1-sql-injection-protection" title="Permanent link">&para;</a></h4>
-<p>Django's ORM (Object-Relational Mapping) automatically escapes SQL queries, preventing SQL injection attacks. This ensures that user inputs do not corrupt or manipulate the database.</p>
-<h4 id="2-cross-site-scripting-xss-protection">2. Cross-Site Scripting (XSS) Protection<a class="headerlink" href="#2-cross-site-scripting-xss-protection" title="Permanent link">&para;</a></h4>
-<p>Django templates escape special characters by default, mitigating the risk of XSS attacks. This prevents malicious scripts from being injected into web pages viewed by other users.</p>
-<h4 id="3-cross-site-request-forgery-csrf-protection">3. Cross-Site Request Forgery (CSRF) Protection<a class="headerlink" href="#3-cross-site-request-forgery-csrf-protection" title="Permanent link">&para;</a></h4>
-<p>Django includes middleware that helps protect against CSRF attacks. It requires a secret token to be included in forms, ensuring that unauthorized commands are not executed.</p>
-<h4 id="4-secure-password-storage">4. Secure Password Storage<a class="headerlink" href="#4-secure-password-storage" title="Permanent link">&para;</a></h4>
-<p>Django uses a robust hashing algorithm (PBKDF2) to store passwords securely. This makes it difficult for attackers to retrieve plain-text passwords, even if they gain access to the database.</p>
-<h4 id="5-https-support">5. HTTPS Support<a class="headerlink" href="#5-https-support" title="Permanent link">&para;</a></h4>
-<p>Django makes it easy to enforce HTTPS, ensuring that data transmitted between the server and clients is encrypted and secure from eavesdropping and tampering.</p>
-<h3 id="best-practices-for-enhancing-django-security">Best Practices for Enhancing Django Security<a class="headerlink" href="#best-practices-for-enhancing-django-security" title="Permanent link">&para;</a></h3>
-<p>While Django provides a solid foundation for web security, developers must also follow best practices to enhance the security of their applications:</p>
+<h1 id="third-party-dependencies-best-practices">Third-Party Dependencies Best Practices<a class="headerlink" href="#third-party-dependencies-best-practices" title="Permanent link">&para;</a></h1>
+<p>Managing third-party dependencies securely is crucial to ensure the integrity and security of your Django web application. This section outlines best practices for handling third-party dependencies effectively.</p>
+<h2 id="dependency-management">Dependency Management<a class="headerlink" href="#dependency-management" title="Permanent link">&para;</a></h2>
+<h3 id="use-dependency-management-tools">Use Dependency Management Tools<a class="headerlink" href="#use-dependency-management-tools" title="Permanent link">&para;</a></h3>
+<p>Utilize tools to manage and track your project's dependencies.</p>
 <ul>
-<li><strong>Regularly Update Django:</strong> Keep your Django installation up-to-date to benefit from the latest security patches and improvements.</li>
-<li><strong>Use Strong Passwords:</strong> Enforce strong password policies to prevent unauthorized access.</li>
-<li><strong>Validate User Input:</strong> Always validate and sanitize user inputs to avoid common security vulnerabilities.</li>
-<li><strong>Use Secure Settings:</strong> Ensure that sensitive settings (e.g., SECRET_KEY, DEBUG) are configured correctly, especially in production environments.</li>
-<li><strong>Monitor and Audit:</strong> Regularly monitor your application for security vulnerabilities and conduct audits to identify potential risks.</li>
+<li>
+<p><strong>pip</strong>: Use pip to install and manage Python packages.
+  <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>package_name
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>pip-tools</strong>: Use pip-tools to compile and synchronize dependencies.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Install pip-tools</span>
+pip<span class="w"> </span>install<span class="w"> </span>pip-tools
+
+<span class="c1"># Compile dependencies</span>
+pip-compile
+
+<span class="c1"># Synchronize dependencies</span>
+pip-sync
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Poetry</strong>: Consider using Poetry for dependency management and packaging.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Install Poetry</span>
+curl<span class="w"> </span>-sSL<span class="w"> </span>https://install.python-poetry.org<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-
+
+<span class="c1"># Add a dependency</span>
+poetry<span class="w"> </span>add<span class="w"> </span>package_name
+</code></pre></div></p>
+</li>
 </ul>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>Building secure web applications is crucial in today’s digital landscape. Django, with its comprehensive security features and best practices, empowers developers to create robust and secure web applications. By leveraging Django's built-in tools and following security best practices, you can protect your web applications from common threats and ensure a safe experience for your users.</p>
-<hr />
-<h3 id="learn-more">Learn More<a class="headerlink" href="#learn-more" title="Permanent link">&para;</a></h3>
-<p>To delve deeper into Django's security features and best practices, explore the following sections:</p>
+<h3 id="pin-dependencies">Pin Dependencies<a class="headerlink" href="#pin-dependencies" title="Permanent link">&para;</a></h3>
+<p>Pin dependencies to specific versions to ensure consistent environments across development, testing, and production.</p>
 <ul>
-<li><a href="../core-concepts/security/">Django Security Overview</a></li>
-<li><a href="../best-practices/secure-coding-practices/">Configuring Secure Settings in Django</a></li>
-<li><a href="../best-practices/general-security-practices/">Best Practices for Secure Django Development</a></li>
-<li><a href="../advanced-techniques/custom-middleware-security/">Advanced Security Techniques</a></li>
+<li><strong>Requirements File</strong>: Use a requirements file to specify exact versions.
+  <div class="highlight"><pre><span></span><code><span class="c1"># requirements.txt</span>
+<span class="nv">django</span><span class="o">==</span><span class="m">3</span>.2.8
+<span class="nv">requests</span><span class="o">==</span><span class="m">2</span>.26.0
+</code></pre></div></li>
 </ul>
-<p>By continuously enhancing your knowledge and staying vigilant, you can build web applications that are both powerful and secure.</p>
+<h2 id="dependency-security">Dependency Security<a class="headerlink" href="#dependency-security" title="Permanent link">&para;</a></h2>
+<h3 id="regularly-update-dependencies">Regularly Update Dependencies<a class="headerlink" href="#regularly-update-dependencies" title="Permanent link">&para;</a></h3>
+<p>Keep dependencies up-to-date to mitigate the risk of vulnerabilities.</p>
+<ul>
+<li>
+<p><strong>pip-review</strong>: Use pip-review to check for outdated packages.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Install pip-review</span>
+pip<span class="w"> </span>install<span class="w"> </span>pip-review
+
+<span class="c1"># List outdated packages</span>
+pip-review<span class="w"> </span>--local
+
+<span class="c1"># Update outdated packages</span>
+pip-review<span class="w"> </span>--local<span class="w"> </span>--auto
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Dependabot</strong>: Use Dependabot to automate dependency updates on GitHub.
+  <div class="highlight"><pre><span></span><code><span class="c1"># .github/dependabot.yml</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">updates</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">package-ecosystem</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;pip&quot;</span>
+<span class="w">    </span><span class="nt">directory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/&quot;</span>
+<span class="w">    </span><span class="nt">schedule</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;daily&quot;</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="vulnerability-scanning">Vulnerability Scanning<a class="headerlink" href="#vulnerability-scanning" title="Permanent link">&para;</a></h3>
+<p>Regularly scan dependencies for known vulnerabilities.</p>
+<ul>
+<li>
+<p><strong>Safety</strong>: Use Safety to check dependencies for known security issues.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Install Safety</span>
+pip<span class="w"> </span>install<span class="w"> </span>safety
+
+<span class="c1"># Check for vulnerabilities</span>
+safety<span class="w"> </span>check
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Snyk</strong>: Use Snyk to continuously monitor and fix vulnerabilities in dependencies.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Install Snyk</span>
+npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>snyk
+
+<span class="c1"># Authenticate with Snyk</span>
+snyk<span class="w"> </span>auth
+
+<span class="c1"># Test for vulnerabilities</span>
+snyk<span class="w"> </span><span class="nb">test</span>
+</code></pre></div></p>
+</li>
+</ul>
+<h2 id="dependency-isolation">Dependency Isolation<a class="headerlink" href="#dependency-isolation" title="Permanent link">&para;</a></h2>
+<h3 id="use-virtual-environments">Use Virtual Environments<a class="headerlink" href="#use-virtual-environments" title="Permanent link">&para;</a></h3>
+<p>Isolate project dependencies using virtual environments to avoid conflicts between packages.</p>
+<ul>
+<li>
+<p><strong>venv</strong>: Use the built-in <code>venv</code> module to create virtual environments.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Create a virtual environment</span>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+
+<span class="c1"># Activate the virtual environment</span>
+<span class="nb">source</span><span class="w"> </span>env/bin/activate
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>virtualenv</strong>: Alternatively, use <code>virtualenv</code> for creating isolated environments.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Install virtualenv</span>
+pip<span class="w"> </span>install<span class="w"> </span>virtualenv
+
+<span class="c1"># Create a virtual environment</span>
+virtualenv<span class="w"> </span>env
+
+<span class="c1"># Activate the virtual environment</span>
+<span class="nb">source</span><span class="w"> </span>env/bin/activate
+</code></pre></div></p>
+</li>
+</ul>
+<h2 id="secure-configuration-of-dependencies">Secure Configuration of Dependencies<a class="headerlink" href="#secure-configuration-of-dependencies" title="Permanent link">&para;</a></h2>
+<h3 id="use-trusted-sources">Use Trusted Sources<a class="headerlink" href="#use-trusted-sources" title="Permanent link">&para;</a></h3>
+<p>Ensure dependencies are installed from trusted sources to avoid malicious packages.</p>
+<ul>
+<li>
+<p><strong>PyPI</strong>: Install packages from the official Python Package Index (PyPI).
+  <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>package_name<span class="w"> </span>--index-url<span class="o">=</span>https://pypi.org/simple
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Private Repositories</strong>: For internal packages, use private repositories with secure access.</p>
+</li>
+</ul>
+<h3 id="verify-package-integrity">Verify Package Integrity<a class="headerlink" href="#verify-package-integrity" title="Permanent link">&para;</a></h3>
+<p>Verify the integrity of packages to ensure they have not been tampered with.</p>
+<ul>
+<li><strong>Hash Verification</strong>: Use hash verification in requirements files.
+  <div class="highlight"><pre><span></span><code><span class="c1"># requirements.txt</span>
+<span class="nv">django</span><span class="o">==</span><span class="m">3</span>.2.8<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--hash<span class="o">=</span>sha256:abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
+</code></pre></div></li>
+</ul>
+<h2 id="auditing-and-compliance">Auditing and Compliance<a class="headerlink" href="#auditing-and-compliance" title="Permanent link">&para;</a></h2>
+<h3 id="regular-audits">Regular Audits<a class="headerlink" href="#regular-audits" title="Permanent link">&para;</a></h3>
+<p>Perform regular audits of your dependencies to ensure compliance with security policies.</p>
+<ul>
+<li><strong>pipdeptree</strong>: Use pipdeptree to visualize the dependency tree and identify potential issues.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Install pipdeptree</span>
+pip<span class="w"> </span>install<span class="w"> </span>pipdeptree
+
+<span class="c1"># Generate dependency tree</span>
+pipdeptree
+</code></pre></div></li>
+</ul>
+<h3 id="licensing-compliance">Licensing Compliance<a class="headerlink" href="#licensing-compliance" title="Permanent link">&para;</a></h3>
+<p>Ensure all dependencies comply with your project's licensing requirements.</p>
+<ul>
+<li><strong>pip-licenses</strong>: Use pip-licenses to check the licenses of your dependencies.
+  <div class="highlight"><pre><span></span><code><span class="c1"># Install pip-licenses</span>
+pip<span class="w"> </span>install<span class="w"> </span>pip-licenses
+
+<span class="c1"># Generate license report</span>
+pip-licenses
+</code></pre></div></li>
+</ul>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Managing third-party dependencies securely is vital to maintaining the security and stability of your Django web application. By using dependency management tools, regularly updating dependencies, scanning for vulnerabilities, isolating environments, verifying package integrity, and performing regular audits, you can effectively mitigate risks associated with third-party packages.</p>
 
 
 
@@ -1552,10 +1770,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

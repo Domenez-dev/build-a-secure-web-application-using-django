@@ -12,28 +12,28 @@
         <meta name="author" content="Domenez-dev">
       
       
-        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/introduction/">
+        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/core-concepts/security/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../../introduction/">
       
       
-        <link rel="next" href="../core-concepts/security/">
+        <link rel="next" href="../web%20apps/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Introduction - Web Security Using Django</title>
+        <title>Overview of Security - Web Security Using Django</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-security-using-django" class="md-skip">
+        <a href="#overview-of-security" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Overview of Security
             
           </span>
         </div>
@@ -221,9 +221,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     Web Security Using Django
@@ -238,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -253,6 +253,63 @@
     
       
       
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
     
@@ -271,7 +328,7 @@
           
   
   <span class="md-ellipsis">
-    Introduction
+    Overview of Security
   </span>
   
 
@@ -282,7 +339,7 @@
         
   
   <span class="md-ellipsis">
-    Introduction
+    Overview of Security
   </span>
   
 
@@ -304,83 +361,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
+  <a href="#key-principles-of-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Home Page Article
+      Key Principles of Security
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Home Page Article">
+    <nav class="md-nav" aria-label="Key Principles of Security">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
+  <a href="#1-confidentiality" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Web Security
+      1. Confidentiality
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
+  <a href="#2-integrity" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding Web Security
+      2. Integrity
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
+  <a href="#3-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
+      3. Availability
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
+  <a href="#4-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
+      4. Authentication
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
+  <a href="#5-authorization" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
+      5. Authorization
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
+  <a href="#6-non-repudiation" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
+      6. Non-repudiation
     </span>
   </a>
   
@@ -390,36 +428,64 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#threats-attacks-and-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threats, Attacks, and Vulnerabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Threats, Attacks, and Vulnerabilities">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
+  <a href="#threats" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
+      Threats:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attacks:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerabilities:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -430,63 +496,6 @@
     </li>
   
 
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Core Concepts
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Core Concepts
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../core-concepts/security/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview of Security
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -496,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/web%20apps/" class="md-nav__link">
+      <a href="../web%20apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/importance/" class="md-nav__link">
+      <a href="../importance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/sql-injection/" class="md-nav__link">
+      <a href="../../django-security/sql-injection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -624,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/xss/" class="md-nav__link">
+      <a href="../../django-security/xss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csrf/" class="md-nav__link">
+      <a href="../../django-security/csrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/password-storage/" class="md-nav__link">
+      <a href="../../django-security/password-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/https/" class="md-nav__link">
+      <a href="../../django-security/https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csp/" class="md-nav__link">
+      <a href="../../django-security/csp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/logging/" class="md-nav__link">
+      <a href="../../django-security/logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/misconfiguration/" class="md-nav__link">
+      <a href="../../django-security/misconfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -815,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/general-security-practices/" class="md-nav__link">
+      <a href="../../best-practices/general-security-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/secure-coding-practices/" class="md-nav__link">
+      <a href="../../best-practices/secure-coding-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/authentication-authorization/" class="md-nav__link">
+      <a href="../../best-practices/authentication-authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/data-protection/" class="md-nav__link">
+      <a href="../../best-practices/data-protection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/configuration-deployment/" class="md-nav__link">
+      <a href="../../best-practices/configuration-deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/network-security/" class="md-nav__link">
+      <a href="../../best-practices/network-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/monitoring-logging/" class="md-nav__link">
+      <a href="../../best-practices/monitoring-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/third-party-dependencies/" class="md-nav__link">
+      <a href="../../best-practices/third-party-dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/performance-scalability/" class="md-nav__link">
+      <a href="../../best-practices/performance-scalability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +1013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/user-education-awareness/" class="md-nav__link">
+      <a href="../../best-practices/user-education-awareness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/compliance-legal/" class="md-nav__link">
+      <a href="../../best-practices/compliance-legal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1090,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/custom-middleware-security/" class="md-nav__link">
+      <a href="../../advanced-techniques/custom-middleware-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/advanced-authentication/" class="md-nav__link">
+      <a href="../../advanced-techniques/advanced-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/rbac/" class="md-nav__link">
+      <a href="../../advanced-techniques/rbac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Rate-Limiting-and-Throttling/" class="md-nav__link">
+      <a href="../../advanced-techniques/Rate-Limiting-and-Throttling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/API-Security/" class="md-nav__link">
+      <a href="../../advanced-techniques/API-Security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1195,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Advanced-Logging-and-Monitoring/" class="md-nav__link">
+      <a href="../../advanced-techniques/Advanced-Logging-and-Monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/SIEM/" class="md-nav__link">
+      <a href="../../advanced-techniques/SIEM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/" class="md-nav__link">
+      <a href="../../case-studies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../author/" class="md-nav__link">
+      <a href="../../author/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,83 +1333,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
+  <a href="#key-principles-of-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Home Page Article
+      Key Principles of Security
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Home Page Article">
+    <nav class="md-nav" aria-label="Key Principles of Security">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
+  <a href="#1-confidentiality" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Web Security
+      1. Confidentiality
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
+  <a href="#2-integrity" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding Web Security
+      2. Integrity
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
+  <a href="#3-availability" class="md-nav__link">
     <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
+      3. Availability
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
+  <a href="#4-authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
+      4. Authentication
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
+  <a href="#5-authorization" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
+      5. Authorization
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
+  <a href="#6-non-repudiation" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
+      6. Non-repudiation
     </span>
   </a>
   
@@ -1410,36 +1400,64 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#threats-attacks-and-vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threats, Attacks, and Vulnerabilities
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Threats, Attacks, and Vulnerabilities">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
+  <a href="#threats" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
+      Threats:
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attacks:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vulnerabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vulnerabilities:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1458,46 +1476,52 @@
                   
 
 
-<h1 id="web-security-using-django">Web Security Using Django<a class="headerlink" href="#web-security-using-django" title="Permanent link">&para;</a></h1>
-<h2 id="home-page-article">Home Page Article<a class="headerlink" href="#home-page-article" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="introduction-to-web-security">Introduction to Web Security<a class="headerlink" href="#introduction-to-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security is a critical aspect of modern web development. As cyber threats become increasingly sophisticated, it is essential to safeguard your web applications against a wide range of vulnerabilities. Django, a high-level Python web framework, provides robust security features out of the box, making it an excellent choice for developers aiming to build secure web applications.</p>
-<h3 id="understanding-web-security">Understanding Web Security<a class="headerlink" href="#understanding-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security involves protecting websites and web applications from cyber attacks that aim to steal data, compromise functionality, or cause other forms of harm. Common threats include SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and security misconfigurations. By addressing these vulnerabilities, developers can ensure the integrity, confidentiality, and availability of their web applications.</p>
-<h3 id="django-a-secure-framework">Django: A Secure Framework<a class="headerlink" href="#django-a-secure-framework" title="Permanent link">&para;</a></h3>
-<p>Django is designed with security in mind. It offers various built-in tools and best practices to help developers secure their applications effectively. Here are some of the key security features provided by Django:</p>
-<h4 id="1-sql-injection-protection">1. SQL Injection Protection<a class="headerlink" href="#1-sql-injection-protection" title="Permanent link">&para;</a></h4>
-<p>Django's ORM (Object-Relational Mapping) automatically escapes SQL queries, preventing SQL injection attacks. This ensures that user inputs do not corrupt or manipulate the database.</p>
-<h4 id="2-cross-site-scripting-xss-protection">2. Cross-Site Scripting (XSS) Protection<a class="headerlink" href="#2-cross-site-scripting-xss-protection" title="Permanent link">&para;</a></h4>
-<p>Django templates escape special characters by default, mitigating the risk of XSS attacks. This prevents malicious scripts from being injected into web pages viewed by other users.</p>
-<h4 id="3-cross-site-request-forgery-csrf-protection">3. Cross-Site Request Forgery (CSRF) Protection<a class="headerlink" href="#3-cross-site-request-forgery-csrf-protection" title="Permanent link">&para;</a></h4>
-<p>Django includes middleware that helps protect against CSRF attacks. It requires a secret token to be included in forms, ensuring that unauthorized commands are not executed.</p>
-<h4 id="4-secure-password-storage">4. Secure Password Storage<a class="headerlink" href="#4-secure-password-storage" title="Permanent link">&para;</a></h4>
-<p>Django uses a robust hashing algorithm (PBKDF2) to store passwords securely. This makes it difficult for attackers to retrieve plain-text passwords, even if they gain access to the database.</p>
-<h4 id="5-https-support">5. HTTPS Support<a class="headerlink" href="#5-https-support" title="Permanent link">&para;</a></h4>
-<p>Django makes it easy to enforce HTTPS, ensuring that data transmitted between the server and clients is encrypted and secure from eavesdropping and tampering.</p>
-<h3 id="best-practices-for-enhancing-django-security">Best Practices for Enhancing Django Security<a class="headerlink" href="#best-practices-for-enhancing-django-security" title="Permanent link">&para;</a></h3>
-<p>While Django provides a solid foundation for web security, developers must also follow best practices to enhance the security of their applications:</p>
+<h1 id="overview-of-security">Overview of Security<a class="headerlink" href="#overview-of-security" title="Permanent link">&para;</a></h1>
+<p>Security is a fundamental aspect of web development, encompassing a range of practices and measures aimed at protecting systems, data, and users from malicious activities and vulnerabilities. This section provides a brief overview of the key principles and concepts of security.</p>
+<h2 id="key-principles-of-security">Key Principles of Security<a class="headerlink" href="#key-principles-of-security" title="Permanent link">&para;</a></h2>
+<h3 id="1-confidentiality">1. Confidentiality<a class="headerlink" href="#1-confidentiality" title="Permanent link">&para;</a></h3>
+<p>Ensuring that sensitive information is accessible only to those authorized to access it. This includes implementing measures like encryption and access controls to protect data from unauthorized access.</p>
+<h3 id="2-integrity">2. Integrity<a class="headerlink" href="#2-integrity" title="Permanent link">&para;</a></h3>
+<p>Ensuring the accuracy and consistency of data over its lifecycle. Integrity measures include hashing, checksums, and data validation techniques to prevent unauthorized modifications.</p>
+<h3 id="3-availability">3. Availability<a class="headerlink" href="#3-availability" title="Permanent link">&para;</a></h3>
+<p>Ensuring that systems and data are accessible to authorized users when needed. This involves implementing redundancy, failover mechanisms, and protections against denial-of-service attacks.</p>
+<h3 id="4-authentication">4. Authentication<a class="headerlink" href="#4-authentication" title="Permanent link">&para;</a></h3>
+<p>Verifying the identity of users and systems. Strong authentication mechanisms, such as multi-factor authentication, help ensure that only authorized users can access systems and data.</p>
+<h3 id="5-authorization">5. Authorization<a class="headerlink" href="#5-authorization" title="Permanent link">&para;</a></h3>
+<p>Granting or denying access to resources based on the user's identity and permissions. Effective authorization mechanisms ensure that users can only access resources they are permitted to use.</p>
+<h3 id="6-non-repudiation">6. Non-repudiation<a class="headerlink" href="#6-non-repudiation" title="Permanent link">&para;</a></h3>
+<p>Ensuring that actions or transactions cannot be denied after the fact. Digital signatures and audit logs help achieve non-repudiation by providing proof of actions taken.</p>
+<h2 id="threats-attacks-and-vulnerabilities">Threats, Attacks, and Vulnerabilities<a class="headerlink" href="#threats-attacks-and-vulnerabilities" title="Permanent link">&para;</a></h2>
+<p>Understanding the distinctions between threats, attacks, and vulnerabilities is crucial in the context of security.</p>
+<h3 id="threats"><strong>Threats</strong>:<a class="headerlink" href="#threats" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Regularly Update Django:</strong> Keep your Django installation up-to-date to benefit from the latest security patches and improvements.</li>
-<li><strong>Use Strong Passwords:</strong> Enforce strong password policies to prevent unauthorized access.</li>
-<li><strong>Validate User Input:</strong> Always validate and sanitize user inputs to avoid common security vulnerabilities.</li>
-<li><strong>Use Secure Settings:</strong> Ensure that sensitive settings (e.g., SECRET_KEY, DEBUG) are configured correctly, especially in production environments.</li>
-<li><strong>Monitor and Audit:</strong> Regularly monitor your application for security vulnerabilities and conduct audits to identify potential risks.</li>
+<li><strong>Definition</strong>: Potential events or actions that could cause harm to a system or data.</li>
+<li><strong>Example</strong>: Malware, phishing attempts, natural disasters.</li>
+<li><strong>Role</strong>: Threats represent the possibility of a harmful event but do not actively cause harm by themselves.</li>
 </ul>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>Building secure web applications is crucial in today’s digital landscape. Django, with its comprehensive security features and best practices, empowers developers to create robust and secure web applications. By leveraging Django's built-in tools and following security best practices, you can protect your web applications from common threats and ensure a safe experience for your users.</p>
-<hr />
-<h3 id="learn-more">Learn More<a class="headerlink" href="#learn-more" title="Permanent link">&para;</a></h3>
-<p>To delve deeper into Django's security features and best practices, explore the following sections:</p>
+<h3 id="attacks"><strong>Attacks</strong>:<a class="headerlink" href="#attacks" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="../core-concepts/security/">Django Security Overview</a></li>
-<li><a href="../best-practices/secure-coding-practices/">Configuring Secure Settings in Django</a></li>
-<li><a href="../best-practices/general-security-practices/">Best Practices for Secure Django Development</a></li>
-<li><a href="../advanced-techniques/custom-middleware-security/">Advanced Security Techniques</a></li>
+<li><strong>Definition</strong>: Deliberate actions taken to exploit vulnerabilities and cause harm to a system or data.</li>
+<li><strong>Example</strong>: SQL injection, cross-site scripting (XSS), denial of service (DoS) attacks.</li>
+<li><strong>Role</strong>: Attacks are the actual events that occur when a threat is realized, actively compromising security.</li>
 </ul>
-<p>By continuously enhancing your knowledge and staying vigilant, you can build web applications that are both powerful and secure.</p>
+<h3 id="vulnerabilities"><strong>Vulnerabilities</strong>:<a class="headerlink" href="#vulnerabilities" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Definition</strong>: Weaknesses or flaws in a system that can be exploited by threats or attacks to cause harm.</li>
+<li><strong>Example</strong>: Unpatched software, weak passwords, insecure configurations.</li>
+<li><strong>Role</strong>: Vulnerabilities are the gateways that allow threats to manifest into attacks, making it essential to identify and mitigate them.</li>
+</ul>
+<p>Understanding these concepts helps in developing strategies to protect against potential threats, prevent attacks, and reduce vulnerabilities in web applications.</p>
+<h2 id="security-best-practices">Security Best Practices<a class="headerlink" href="#security-best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Regular Updates</strong>: Keep systems and software up to date with the latest security patches.</li>
+<li><strong>Strong Passwords</strong>: Enforce the use of strong, unique passwords and consider multi-factor authentication.</li>
+<li><strong>Encryption</strong>: Use encryption for sensitive data in transit and at rest.</li>
+<li><strong>Access Controls</strong>: Implement strict access controls to limit who can access what data.</li>
+<li><strong>Security Training</strong>: Regularly train employees on security best practices and emerging threats.</li>
+</ul>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Security is an essential component of web development, requiring a proactive approach to protect systems, data, and users from various threats. Understanding and implementing key security principles and best practices is critical for developing robust and secure web applications.</p>
 
 
 
@@ -1552,10 +1576,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

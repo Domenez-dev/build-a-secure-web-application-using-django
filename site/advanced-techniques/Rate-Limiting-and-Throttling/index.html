@@ -12,28 +12,28 @@
         <meta name="author" content="Domenez-dev">
       
       
-        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/introduction/">
+        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/advanced-techniques/Rate-Limiting-and-Throttling/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../rbac/">
       
       
-        <link rel="next" href="../core-concepts/security/">
+        <link rel="next" href="../API-Security/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Introduction - Web Security Using Django</title>
+        <title>Rate Limiting and Throttling - Web Security Using Django</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-security-using-django" class="md-skip">
+        <a href="#rate-limiting-and-throttling" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Rate Limiting and Throttling
             
           </span>
         </div>
@@ -221,9 +221,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     Web Security Using Django
@@ -238,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -255,30 +255,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,146 +267,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
-    <span class="md-ellipsis">
-      Home Page Article
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Home Page Article">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Understanding Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -475,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/security/" class="md-nav__link">
+      <a href="../../core-concepts/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/web%20apps/" class="md-nav__link">
+      <a href="../../core-concepts/web%20apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/overview/" class="md-nav__link">
+      <a href="../../core-concepts/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/importance/" class="md-nav__link">
+      <a href="../../core-concepts/importance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/sql-injection/" class="md-nav__link">
+      <a href="../../django-security/sql-injection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -624,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/xss/" class="md-nav__link">
+      <a href="../../django-security/xss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csrf/" class="md-nav__link">
+      <a href="../../django-security/csrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/password-storage/" class="md-nav__link">
+      <a href="../../django-security/password-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/https/" class="md-nav__link">
+      <a href="../../django-security/https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csp/" class="md-nav__link">
+      <a href="../../django-security/csp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/logging/" class="md-nav__link">
+      <a href="../../django-security/logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/misconfiguration/" class="md-nav__link">
+      <a href="../../django-security/misconfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -815,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/general-security-practices/" class="md-nav__link">
+      <a href="../../best-practices/general-security-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/secure-coding-practices/" class="md-nav__link">
+      <a href="../../best-practices/secure-coding-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/authentication-authorization/" class="md-nav__link">
+      <a href="../../best-practices/authentication-authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/data-protection/" class="md-nav__link">
+      <a href="../../best-practices/data-protection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/configuration-deployment/" class="md-nav__link">
+      <a href="../../best-practices/configuration-deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/network-security/" class="md-nav__link">
+      <a href="../../best-practices/network-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/monitoring-logging/" class="md-nav__link">
+      <a href="../../best-practices/monitoring-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/third-party-dependencies/" class="md-nav__link">
+      <a href="../../best-practices/third-party-dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/performance-scalability/" class="md-nav__link">
+      <a href="../../best-practices/performance-scalability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/user-education-awareness/" class="md-nav__link">
+      <a href="../../best-practices/user-education-awareness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/compliance-legal/" class="md-nav__link">
+      <a href="../../best-practices/compliance-legal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,19 +890,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1076,7 +916,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Advanced Techniques
@@ -1090,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/custom-middleware-security/" class="md-nav__link">
+      <a href="../custom-middleware-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/advanced-authentication/" class="md-nav__link">
+      <a href="../advanced-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/rbac/" class="md-nav__link">
+      <a href="../rbac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1150,10 +990,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../advanced-techniques/Rate-Limiting-and-Throttling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Rate Limiting and Throttling
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1162,6 +1022,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementing-rate-limiting-to-prevent-abuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementing Rate Limiting to Prevent Abuse
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementing Rate Limiting to Prevent Abuse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-django-rest-frameworks-throttling-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Django REST Framework’s Throttling Mechanisms
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-throttling-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing Throttling Behavior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Throttling Behavior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-throttle-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Throttle Classes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#throttling-based-on-user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throttling Based on User Roles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1174,7 +1120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/API-Security/" class="md-nav__link">
+      <a href="../API-Security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1195,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Advanced-Logging-and-Monitoring/" class="md-nav__link">
+      <a href="../Advanced-Logging-and-Monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1216,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/SIEM/" class="md-nav__link">
+      <a href="../SIEM/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1244,7 +1190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/" class="md-nav__link">
+      <a href="../../case-studies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../author/" class="md-nav__link">
+      <a href="../../author/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,83 +1270,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
+  <a href="#implementing-rate-limiting-to-prevent-abuse" class="md-nav__link">
     <span class="md-ellipsis">
-      Home Page Article
+      Implementing Rate Limiting to Prevent Abuse
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Home Page Article">
+    <nav class="md-nav" aria-label="Implementing Rate Limiting to Prevent Abuse">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
+  <a href="#using-django-rest-frameworks-throttling-mechanisms" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Understanding Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
+      Using Django REST Framework’s Throttling Mechanisms
     </span>
   </a>
   
@@ -1410,36 +1292,46 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-throttling-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing Throttling Behavior
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing Throttling Behavior">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
+  <a href="#custom-throttle-classes" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
+      Custom Throttle Classes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#throttling-based-on-user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Throttling Based on User Roles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1458,46 +1350,103 @@
                   
 
 
-<h1 id="web-security-using-django">Web Security Using Django<a class="headerlink" href="#web-security-using-django" title="Permanent link">&para;</a></h1>
-<h2 id="home-page-article">Home Page Article<a class="headerlink" href="#home-page-article" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="introduction-to-web-security">Introduction to Web Security<a class="headerlink" href="#introduction-to-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security is a critical aspect of modern web development. As cyber threats become increasingly sophisticated, it is essential to safeguard your web applications against a wide range of vulnerabilities. Django, a high-level Python web framework, provides robust security features out of the box, making it an excellent choice for developers aiming to build secure web applications.</p>
-<h3 id="understanding-web-security">Understanding Web Security<a class="headerlink" href="#understanding-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security involves protecting websites and web applications from cyber attacks that aim to steal data, compromise functionality, or cause other forms of harm. Common threats include SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and security misconfigurations. By addressing these vulnerabilities, developers can ensure the integrity, confidentiality, and availability of their web applications.</p>
-<h3 id="django-a-secure-framework">Django: A Secure Framework<a class="headerlink" href="#django-a-secure-framework" title="Permanent link">&para;</a></h3>
-<p>Django is designed with security in mind. It offers various built-in tools and best practices to help developers secure their applications effectively. Here are some of the key security features provided by Django:</p>
-<h4 id="1-sql-injection-protection">1. SQL Injection Protection<a class="headerlink" href="#1-sql-injection-protection" title="Permanent link">&para;</a></h4>
-<p>Django's ORM (Object-Relational Mapping) automatically escapes SQL queries, preventing SQL injection attacks. This ensures that user inputs do not corrupt or manipulate the database.</p>
-<h4 id="2-cross-site-scripting-xss-protection">2. Cross-Site Scripting (XSS) Protection<a class="headerlink" href="#2-cross-site-scripting-xss-protection" title="Permanent link">&para;</a></h4>
-<p>Django templates escape special characters by default, mitigating the risk of XSS attacks. This prevents malicious scripts from being injected into web pages viewed by other users.</p>
-<h4 id="3-cross-site-request-forgery-csrf-protection">3. Cross-Site Request Forgery (CSRF) Protection<a class="headerlink" href="#3-cross-site-request-forgery-csrf-protection" title="Permanent link">&para;</a></h4>
-<p>Django includes middleware that helps protect against CSRF attacks. It requires a secret token to be included in forms, ensuring that unauthorized commands are not executed.</p>
-<h4 id="4-secure-password-storage">4. Secure Password Storage<a class="headerlink" href="#4-secure-password-storage" title="Permanent link">&para;</a></h4>
-<p>Django uses a robust hashing algorithm (PBKDF2) to store passwords securely. This makes it difficult for attackers to retrieve plain-text passwords, even if they gain access to the database.</p>
-<h4 id="5-https-support">5. HTTPS Support<a class="headerlink" href="#5-https-support" title="Permanent link">&para;</a></h4>
-<p>Django makes it easy to enforce HTTPS, ensuring that data transmitted between the server and clients is encrypted and secure from eavesdropping and tampering.</p>
-<h3 id="best-practices-for-enhancing-django-security">Best Practices for Enhancing Django Security<a class="headerlink" href="#best-practices-for-enhancing-django-security" title="Permanent link">&para;</a></h3>
-<p>While Django provides a solid foundation for web security, developers must also follow best practices to enhance the security of their applications:</p>
-<ul>
-<li><strong>Regularly Update Django:</strong> Keep your Django installation up-to-date to benefit from the latest security patches and improvements.</li>
-<li><strong>Use Strong Passwords:</strong> Enforce strong password policies to prevent unauthorized access.</li>
-<li><strong>Validate User Input:</strong> Always validate and sanitize user inputs to avoid common security vulnerabilities.</li>
-<li><strong>Use Secure Settings:</strong> Ensure that sensitive settings (e.g., SECRET_KEY, DEBUG) are configured correctly, especially in production environments.</li>
-<li><strong>Monitor and Audit:</strong> Regularly monitor your application for security vulnerabilities and conduct audits to identify potential risks.</li>
-</ul>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>Building secure web applications is crucial in today’s digital landscape. Django, with its comprehensive security features and best practices, empowers developers to create robust and secure web applications. By leveraging Django's built-in tools and following security best practices, you can protect your web applications from common threats and ensure a safe experience for your users.</p>
-<hr />
-<h3 id="learn-more">Learn More<a class="headerlink" href="#learn-more" title="Permanent link">&para;</a></h3>
-<p>To delve deeper into Django's security features and best practices, explore the following sections:</p>
-<ul>
-<li><a href="../core-concepts/security/">Django Security Overview</a></li>
-<li><a href="../best-practices/secure-coding-practices/">Configuring Secure Settings in Django</a></li>
-<li><a href="../best-practices/general-security-practices/">Best Practices for Secure Django Development</a></li>
-<li><a href="../advanced-techniques/custom-middleware-security/">Advanced Security Techniques</a></li>
-</ul>
-<p>By continuously enhancing your knowledge and staying vigilant, you can build web applications that are both powerful and secure.</p>
+<h1 id="rate-limiting-and-throttling">Rate Limiting and Throttling<a class="headerlink" href="#rate-limiting-and-throttling" title="Permanent link">&para;</a></h1>
+<p>Rate limiting and throttling are crucial techniques for protecting your web application from abuse and ensuring fair usage among users. Implementing these techniques in Django helps to prevent denial-of-service attacks, brute-force attempts, and excessive API usage.</p>
+<h2 id="implementing-rate-limiting-to-prevent-abuse">Implementing Rate Limiting to Prevent Abuse<a class="headerlink" href="#implementing-rate-limiting-to-prevent-abuse" title="Permanent link">&para;</a></h2>
+<p>Rate limiting restricts the number of requests a user can make in a given time period. This helps to prevent abuse and ensures the stability and performance of your application.</p>
+<h3 id="using-django-rest-frameworks-throttling-mechanisms">Using Django REST Framework’s Throttling Mechanisms<a class="headerlink" href="#using-django-rest-frameworks-throttling-mechanisms" title="Permanent link">&para;</a></h3>
+<p>Django REST Framework (DRF) provides built-in support for rate limiting, known as throttling. Throttling can be applied at the global, view, or user level.</p>
+<ol>
+<li><strong>Install Django REST Framework</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>djangorestframework
+</code></pre></div>
+<ol>
+<li><strong>Configure Throttling Classes</strong></li>
+</ol>
+<p>Add DRF to your <code>INSTALLED_APPS</code> and configure the throttling classes in <code>settings.py</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Other apps...</span>
+    <span class="s1">&#39;rest_framework&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;DEFAULT_THROTTLE_CLASSES&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;rest_framework.throttling.UserRateThrottle&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;rest_framework.throttling.AnonRateThrottle&#39;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;DEFAULT_THROTTLE_RATES&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="s1">&#39;100/day&#39;</span><span class="p">,</span>  <span class="c1"># Adjust as necessary</span>
+        <span class="s1">&#39;anon&#39;</span><span class="p">:</span> <span class="s1">&#39;20/hour&#39;</span><span class="p">,</span>  <span class="c1"># Adjust as necessary</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><strong>Apply Throttling to Views</strong></li>
+</ol>
+<p>Throttling can be applied to specific views or viewsets.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">rest_framework.throttling</span> <span class="kn">import</span> <span class="n">UserRateThrottle</span><span class="p">,</span> <span class="n">AnonRateThrottle</span>
+<span class="kn">from</span> <span class="nn">rest_framework.views</span> <span class="kn">import</span> <span class="n">APIView</span>
+<span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+
+<span class="k">class</span> <span class="nc">ExampleView</span><span class="p">(</span><span class="n">APIView</span><span class="p">):</span>
+    <span class="n">throttle_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">UserRateThrottle</span><span class="p">,</span> <span class="n">AnonRateThrottle</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Hello, World!&#39;</span><span class="p">}</span>
+        <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="customizing-throttling-behavior">Customizing Throttling Behavior<a class="headerlink" href="#customizing-throttling-behavior" title="Permanent link">&para;</a></h2>
+<p>You can customize throttling behavior based on user roles or IP addresses to provide more granular control over request limits.</p>
+<h3 id="custom-throttle-classes">Custom Throttle Classes<a class="headerlink" href="#custom-throttle-classes" title="Permanent link">&para;</a></h3>
+<p>Create custom throttle classes by extending DRF’s <code>BaseThrottle</code> class.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">rest_framework.throttling</span> <span class="kn">import</span> <span class="n">BaseThrottle</span>
+<span class="kn">from</span> <span class="nn">django.core.cache</span> <span class="kn">import</span> <span class="n">cache</span>
+
+<span class="k">class</span> <span class="nc">CustomRateThrottle</span><span class="p">(</span><span class="n">BaseThrottle</span><span class="p">):</span>
+    <span class="n">rate</span> <span class="o">=</span> <span class="s1">&#39;10/minute&#39;</span>  <span class="c1"># Adjust as necessary</span>
+
+    <span class="k">def</span> <span class="nf">get_cache_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">view</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ident</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">allow_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">view</span><span class="p">):</span>
+        <span class="n">cache_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cache_key</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">view</span><span class="p">)</span>
+        <span class="n">current_requests</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cache_key</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">current_requests</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rate</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cache_key</span><span class="p">,</span> <span class="n">current_requests</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div>
+<h3 id="throttling-based-on-user-roles">Throttling Based on User Roles<a class="headerlink" href="#throttling-based-on-user-roles" title="Permanent link">&para;</a></h3>
+<p>You can implement throttling rules that vary based on the user’s role.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">rest_framework.throttling</span> <span class="kn">import</span> <span class="n">SimpleRateThrottle</span>
+
+<span class="k">class</span> <span class="nc">RoleBasedRateThrottle</span><span class="p">(</span><span class="n">SimpleRateThrottle</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get_cache_key</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">view</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_authenticated</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">is_staff</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>  <span class="c1"># No throttling for staff users</span>
+            <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;throttle_user_</span><span class="si">{</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">pk</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_ident</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">allow_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">view</span><span class="p">):</span>
+        <span class="n">cache_key</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_cache_key</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">view</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cache_key</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+
+        <span class="n">current_requests</span> <span class="o">=</span> <span class="n">cache</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cache_key</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_rate</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">current_requests</span> <span class="o">&gt;=</span> <span class="n">rate</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">cache</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">cache_key</span><span class="p">,</span> <span class="n">current_requests</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">duration</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Rate limiting and throttling are essential techniques for ensuring the stability and security of your Django application. By using Django REST Framework’s built-in throttling mechanisms and customizing them as needed, you can effectively manage request rates and protect your application from abuse. Implementing these techniques helps maintain a fair and reliable service for all users.</p>
 
 
 
@@ -1552,10 +1501,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>

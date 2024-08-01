@@ -12,28 +12,28 @@
         <meta name="author" content="Domenez-dev">
       
       
-        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/introduction/">
+        <link rel="canonical" href="https://domenez-dev.github.io/build-a-secure-web-application-using-django/advanced-techniques/SIEM/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../Advanced-Logging-and-Monitoring/">
       
       
-        <link rel="next" href="../core-concepts/security/">
+        <link rel="next" href="../../case-studies/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
     
     
       
-        <title>Introduction - Web Security Using Django</title>
+        <title>SIEM - Web Security Using Django</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6543a935.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-security-using-django" class="md-skip">
+        <a href="#integrating-with-security-information-and-event-management-siem" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +94,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-header__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../assets/images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              SIEM
             
           </span>
         </div>
@@ -221,9 +221,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
+    <a href="../.." title="Web Security Using Django" class="md-nav__button md-logo" aria-label="Web Security Using Django" data-md-component="logo">
       
-  <img src="../images/logo.jpg" alt="logo">
+  <img src="../../images/logo.jpg" alt="logo">
 
     </a>
     Web Security Using Django
@@ -238,7 +238,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -255,30 +255,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,146 +267,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
-    <span class="md-ellipsis">
-      Home Page Article
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Home Page Article">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction to Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Understanding Web Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -475,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/security/" class="md-nav__link">
+      <a href="../../core-concepts/security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/web%20apps/" class="md-nav__link">
+      <a href="../../core-concepts/web%20apps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/overview/" class="md-nav__link">
+      <a href="../../core-concepts/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../core-concepts/importance/" class="md-nav__link">
+      <a href="../../core-concepts/importance/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/sql-injection/" class="md-nav__link">
+      <a href="../../django-security/sql-injection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -624,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/xss/" class="md-nav__link">
+      <a href="../../django-security/xss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csrf/" class="md-nav__link">
+      <a href="../../django-security/csrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/password-storage/" class="md-nav__link">
+      <a href="../../django-security/password-storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -687,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/https/" class="md-nav__link">
+      <a href="../../django-security/https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/csp/" class="md-nav__link">
+      <a href="../../django-security/csp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -729,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/logging/" class="md-nav__link">
+      <a href="../../django-security/logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../django-security/misconfiguration/" class="md-nav__link">
+      <a href="../../django-security/misconfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -815,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/general-security-practices/" class="md-nav__link">
+      <a href="../../best-practices/general-security-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/secure-coding-practices/" class="md-nav__link">
+      <a href="../../best-practices/secure-coding-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/authentication-authorization/" class="md-nav__link">
+      <a href="../../best-practices/authentication-authorization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/data-protection/" class="md-nav__link">
+      <a href="../../best-practices/data-protection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/configuration-deployment/" class="md-nav__link">
+      <a href="../../best-practices/configuration-deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/network-security/" class="md-nav__link">
+      <a href="../../best-practices/network-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -941,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/monitoring-logging/" class="md-nav__link">
+      <a href="../../best-practices/monitoring-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/third-party-dependencies/" class="md-nav__link">
+      <a href="../../best-practices/third-party-dependencies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,7 +823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/performance-scalability/" class="md-nav__link">
+      <a href="../../best-practices/performance-scalability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/user-education-awareness/" class="md-nav__link">
+      <a href="../../best-practices/user-education-awareness/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1025,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../best-practices/compliance-legal/" class="md-nav__link">
+      <a href="../../best-practices/compliance-legal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,19 +890,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1076,7 +916,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Advanced Techniques
@@ -1090,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/custom-middleware-security/" class="md-nav__link">
+      <a href="../custom-middleware-security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/advanced-authentication/" class="md-nav__link">
+      <a href="../advanced-authentication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/rbac/" class="md-nav__link">
+      <a href="../rbac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Rate-Limiting-and-Throttling/" class="md-nav__link">
+      <a href="../Rate-Limiting-and-Throttling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/API-Security/" class="md-nav__link">
+      <a href="../API-Security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1195,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced-techniques/Advanced-Logging-and-Monitoring/" class="md-nav__link">
+      <a href="../Advanced-Logging-and-Monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1213,10 +1053,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../advanced-techniques/SIEM/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SIEM
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1225,6 +1085,143 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-integrations-with-siem-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Integrations with SIEM Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Integrations with SIEM Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-siem-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common SIEM Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-integrating-with-splunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Integrating with Splunk
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-integrating-with-elk-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Integrating with ELK Stack
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-and-monitoring-for-security-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring for Security Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging and Monitoring for Security Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-djangos-signals-for-security-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Django’s Signals for Security Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#centralizing-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centralizing Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-incident-response-and-alerting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Incident Response and Alerting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Incident Response and Alerting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-setting-up-alerts-in-splunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Setting Up Alerts in Splunk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1244,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../case-studies/" class="md-nav__link">
+      <a href="../../case-studies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1284,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../author/" class="md-nav__link">
+      <a href="../../author/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,83 +1321,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#home-page-article" class="md-nav__link">
+  <a href="#setting-up-integrations-with-siem-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      Home Page Article
+      Setting Up Integrations with SIEM Tools
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Home Page Article">
+    <nav class="md-nav" aria-label="Setting Up Integrations with SIEM Tools">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduction-to-web-security" class="md-nav__link">
+  <a href="#common-siem-tools" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction to Web Security
+      Common SIEM Tools
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-web-security" class="md-nav__link">
+  <a href="#example-integrating-with-splunk" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding Web Security
+      Example: Integrating with Splunk
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#django-a-secure-framework" class="md-nav__link">
+  <a href="#example-integrating-with-elk-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      Django: A Secure Framework
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Django: A Secure Framework">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-sql-injection-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. SQL Injection Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-cross-site-scripting-xss-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Cross-Site Scripting (XSS) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-cross-site-request-forgery-csrf-protection" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Cross-Site Request Forgery (CSRF) Protection
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-secure-password-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Secure Password Storage
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-https-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. HTTPS Support
+      Example: Integrating with ELK Stack
     </span>
   </a>
   
@@ -1410,36 +1361,79 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-and-monitoring-for-security-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring for Security Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logging and Monitoring for Security Events">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#best-practices-for-enhancing-django-security" class="md-nav__link">
+  <a href="#using-djangos-signals-for-security-monitoring" class="md-nav__link">
     <span class="md-ellipsis">
-      Best Practices for Enhancing Django Security
+      Using Django’s Signals for Security Monitoring
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
+  <a href="#centralizing-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centralizing Logs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-incident-response-and-alerting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Incident Response and Alerting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Incident Response and Alerting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Alerts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-setting-up-alerts-in-splunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Setting Up Alerts in Splunk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
       Conclusion
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learn-more" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learn More
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1458,46 +1452,144 @@
                   
 
 
-<h1 id="web-security-using-django">Web Security Using Django<a class="headerlink" href="#web-security-using-django" title="Permanent link">&para;</a></h1>
-<h2 id="home-page-article">Home Page Article<a class="headerlink" href="#home-page-article" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="introduction-to-web-security">Introduction to Web Security<a class="headerlink" href="#introduction-to-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security is a critical aspect of modern web development. As cyber threats become increasingly sophisticated, it is essential to safeguard your web applications against a wide range of vulnerabilities. Django, a high-level Python web framework, provides robust security features out of the box, making it an excellent choice for developers aiming to build secure web applications.</p>
-<h3 id="understanding-web-security">Understanding Web Security<a class="headerlink" href="#understanding-web-security" title="Permanent link">&para;</a></h3>
-<p>Web security involves protecting websites and web applications from cyber attacks that aim to steal data, compromise functionality, or cause other forms of harm. Common threats include SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and security misconfigurations. By addressing these vulnerabilities, developers can ensure the integrity, confidentiality, and availability of their web applications.</p>
-<h3 id="django-a-secure-framework">Django: A Secure Framework<a class="headerlink" href="#django-a-secure-framework" title="Permanent link">&para;</a></h3>
-<p>Django is designed with security in mind. It offers various built-in tools and best practices to help developers secure their applications effectively. Here are some of the key security features provided by Django:</p>
-<h4 id="1-sql-injection-protection">1. SQL Injection Protection<a class="headerlink" href="#1-sql-injection-protection" title="Permanent link">&para;</a></h4>
-<p>Django's ORM (Object-Relational Mapping) automatically escapes SQL queries, preventing SQL injection attacks. This ensures that user inputs do not corrupt or manipulate the database.</p>
-<h4 id="2-cross-site-scripting-xss-protection">2. Cross-Site Scripting (XSS) Protection<a class="headerlink" href="#2-cross-site-scripting-xss-protection" title="Permanent link">&para;</a></h4>
-<p>Django templates escape special characters by default, mitigating the risk of XSS attacks. This prevents malicious scripts from being injected into web pages viewed by other users.</p>
-<h4 id="3-cross-site-request-forgery-csrf-protection">3. Cross-Site Request Forgery (CSRF) Protection<a class="headerlink" href="#3-cross-site-request-forgery-csrf-protection" title="Permanent link">&para;</a></h4>
-<p>Django includes middleware that helps protect against CSRF attacks. It requires a secret token to be included in forms, ensuring that unauthorized commands are not executed.</p>
-<h4 id="4-secure-password-storage">4. Secure Password Storage<a class="headerlink" href="#4-secure-password-storage" title="Permanent link">&para;</a></h4>
-<p>Django uses a robust hashing algorithm (PBKDF2) to store passwords securely. This makes it difficult for attackers to retrieve plain-text passwords, even if they gain access to the database.</p>
-<h4 id="5-https-support">5. HTTPS Support<a class="headerlink" href="#5-https-support" title="Permanent link">&para;</a></h4>
-<p>Django makes it easy to enforce HTTPS, ensuring that data transmitted between the server and clients is encrypted and secure from eavesdropping and tampering.</p>
-<h3 id="best-practices-for-enhancing-django-security">Best Practices for Enhancing Django Security<a class="headerlink" href="#best-practices-for-enhancing-django-security" title="Permanent link">&para;</a></h3>
-<p>While Django provides a solid foundation for web security, developers must also follow best practices to enhance the security of their applications:</p>
+<h1 id="integrating-with-security-information-and-event-management-siem">Integrating with Security Information and Event Management (SIEM)<a class="headerlink" href="#integrating-with-security-information-and-event-management-siem" title="Permanent link">&para;</a></h1>
+<p>Security Information and Event Management (SIEM) systems provide real-time analysis of security alerts generated by applications and network hardware. Integrating your Django application with a SIEM tool enhances your ability to detect and respond to security threats.</p>
+<h2 id="setting-up-integrations-with-siem-tools">Setting Up Integrations with SIEM Tools<a class="headerlink" href="#setting-up-integrations-with-siem-tools" title="Permanent link">&para;</a></h2>
+<p>Integrating Django with SIEM tools involves sending log data and security events to the SIEM system for centralized analysis and monitoring.</p>
+<h3 id="common-siem-tools">Common SIEM Tools<a class="headerlink" href="#common-siem-tools" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Regularly Update Django:</strong> Keep your Django installation up-to-date to benefit from the latest security patches and improvements.</li>
-<li><strong>Use Strong Passwords:</strong> Enforce strong password policies to prevent unauthorized access.</li>
-<li><strong>Validate User Input:</strong> Always validate and sanitize user inputs to avoid common security vulnerabilities.</li>
-<li><strong>Use Secure Settings:</strong> Ensure that sensitive settings (e.g., SECRET_KEY, DEBUG) are configured correctly, especially in production environments.</li>
-<li><strong>Monitor and Audit:</strong> Regularly monitor your application for security vulnerabilities and conduct audits to identify potential risks.</li>
+<li>Splunk</li>
+<li>ELK Stack (Elasticsearch, Logstash, Kibana)</li>
+<li>IBM QRadar</li>
+<li>ArcSight</li>
+<li>Sumo Logic</li>
 </ul>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
-<p>Building secure web applications is crucial in today’s digital landscape. Django, with its comprehensive security features and best practices, empowers developers to create robust and secure web applications. By leveraging Django's built-in tools and following security best practices, you can protect your web applications from common threats and ensure a safe experience for your users.</p>
-<hr />
-<h3 id="learn-more">Learn More<a class="headerlink" href="#learn-more" title="Permanent link">&para;</a></h3>
-<p>To delve deeper into Django's security features and best practices, explore the following sections:</p>
+<h3 id="example-integrating-with-splunk">Example: Integrating with Splunk<a class="headerlink" href="#example-integrating-with-splunk" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Install Splunk</strong></li>
+</ol>
+<p>Follow the official <a href="https://docs.splunk.com/Documentation/Splunk/latest/Installation/InstallonLinux">Splunk installation guide</a> to set up Splunk on your server.</p>
+<ol>
+<li><strong>Configure Log Forwarding</strong></li>
+</ol>
+<p>Use Splunk’s Universal Forwarder to send log data from your Django application to the Splunk server.</p>
 <ul>
-<li><a href="../core-concepts/security/">Django Security Overview</a></li>
-<li><a href="../best-practices/secure-coding-practices/">Configuring Secure Settings in Django</a></li>
-<li><a href="../best-practices/general-security-practices/">Best Practices for Secure Django Development</a></li>
-<li><a href="../advanced-techniques/custom-middleware-security/">Advanced Security Techniques</a></li>
+<li>Install the Universal Forwarder on the server hosting your Django application.</li>
+<li>Configure the Universal Forwarder to monitor your Django log files.</li>
 </ul>
-<p>By continuously enhancing your knowledge and staying vigilant, you can build web applications that are both powerful and secure.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Universal Forwarder</span>
+wget<span class="w"> </span>-O<span class="w"> </span>splunkforwarder-&lt;version&gt;-Linux-x86_64.tgz<span class="w"> </span><span class="s1">&#39;https://www.splunk.com/en_us/download/universal-forwarder.html&#39;</span>
+tar<span class="w"> </span>-xvzf<span class="w"> </span>splunkforwarder-&lt;version&gt;-Linux-x86_64.tgz
+./splunkforwarder/bin/splunk<span class="w"> </span>start<span class="w"> </span>--accept-license
+./splunkforwarder/bin/splunk<span class="w"> </span>add<span class="w"> </span>forward-server<span class="w"> </span>&lt;splunk-server-ip&gt;:9997
+
+<span class="c1"># Configure the forwarder to monitor Django logs</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;[monitor:///path/to/django/logs]&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>./splunkforwarder/etc/system/local/inputs.conf
+./splunkforwarder/bin/splunk<span class="w"> </span>restart
+</code></pre></div>
+<ol>
+<li><strong>Create Log Source in Splunk</strong></li>
+</ol>
+<p>Configure a data input in Splunk to receive the forwarded logs.</p>
+<ul>
+<li>Go to <strong>Settings &gt; Data inputs</strong> in the Splunk web interface.</li>
+<li>Add a new <strong>TCP/UDP input</strong> on port <code>9997</code>.</li>
+<li>Name the input and specify any required settings.</li>
+</ul>
+<h3 id="example-integrating-with-elk-stack">Example: Integrating with ELK Stack<a class="headerlink" href="#example-integrating-with-elk-stack" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Install Elasticsearch, Logstash, and Kibana</strong></li>
+</ol>
+<p>Follow the official installation guides to set up the ELK stack on your server.</p>
+<ol>
+<li><strong>Configure Logstash for Log Processing</strong></li>
+</ol>
+<p>Use Logstash to process and forward your Django logs to Elasticsearch.</p>
+<div class="highlight"><pre><span></span><code>input {
+  file {
+    path =&gt; &quot;/path/to/django_debug.log&quot;
+    start_position =&gt; &quot;beginning&quot;
+  }
+}
+
+filter {
+  grok {
+    match =&gt; { &quot;message&quot; =&gt; &quot;%{LOGLEVEL:loglevel} %{TIMESTAMP_ISO8601:timestamp} %{GREEDYDATA:message}&quot; }
+  }
+  date {
+    match =&gt; [ &quot;timestamp&quot;, &quot;ISO8601&quot; ]
+  }
+}
+
+output {
+  elasticsearch {
+    hosts =&gt; [&quot;localhost:9200&quot;]
+    index =&gt; &quot;django-logs-%{+YYYY.MM.dd}&quot;
+  }
+}
+</code></pre></div>
+<ol>
+<li><strong>Visualize Logs with Kibana</strong></li>
+</ol>
+<p>Access Kibana to create visualizations and dashboards for your logs.</p>
+<ul>
+<li><strong>Create Index Pattern</strong>: Create an index pattern for <code>django-logs-*</code>.</li>
+<li><strong>Build Dashboards</strong>: Use Kibana’s tools to build dashboards and visualize log data.</li>
+</ul>
+<h2 id="logging-and-monitoring-for-security-events">Logging and Monitoring for Security Events<a class="headerlink" href="#logging-and-monitoring-for-security-events" title="Permanent link">&para;</a></h2>
+<h3 id="using-djangos-signals-for-security-monitoring">Using Django’s Signals for Security Monitoring<a class="headerlink" href="#using-djangos-signals-for-security-monitoring" title="Permanent link">&para;</a></h3>
+<p>Django signals can be used to monitor security-related events, such as user logins and logouts.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.contrib.auth.signals</span> <span class="kn">import</span> <span class="n">user_logged_in</span><span class="p">,</span> <span class="n">user_logged_out</span>
+<span class="kn">from</span> <span class="nn">django.dispatch</span> <span class="kn">import</span> <span class="n">receiver</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s1">&#39;security&#39;</span><span class="p">)</span>
+
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">user_logged_in</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">log_user_logged_in</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;User logged in: </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nd">@receiver</span><span class="p">(</span><span class="n">user_logged_out</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">log_user_logged_out</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;User logged out: </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="centralizing-logs">Centralizing Logs<a class="headerlink" href="#centralizing-logs" title="Permanent link">&para;</a></h3>
+<p>Centralizing logs from multiple sources makes it easier to analyze security events and detect patterns that might indicate a threat.</p>
+<ul>
+<li><strong>Use Centralized Log Storage</strong>: Store all logs in a single, searchable location.</li>
+<li><strong>Normalize Log Formats</strong>: Ensure that logs from different sources use a consistent format.</li>
+</ul>
+<h2 id="automated-incident-response-and-alerting">Automated Incident Response and Alerting<a class="headerlink" href="#automated-incident-response-and-alerting" title="Permanent link">&para;</a></h2>
+<p>Automating incident response and alerting improves your ability to respond to security threats quickly and effectively.</p>
+<h3 id="setting-up-alerts">Setting Up Alerts<a class="headerlink" href="#setting-up-alerts" title="Permanent link">&para;</a></h3>
+<p>Configure your SIEM tool to send alerts based on specific conditions or thresholds.</p>
+<ul>
+<li><strong>Threshold-Based Alerts</strong>: Trigger alerts when a predefined threshold is exceeded (e.g., a high number of failed login attempts).</li>
+<li><strong>Anomaly Detection</strong>: Use machine learning to detect unusual patterns of behavior.</li>
+</ul>
+<h3 id="example-setting-up-alerts-in-splunk">Example: Setting Up Alerts in Splunk<a class="headerlink" href="#example-setting-up-alerts-in-splunk" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Create an Alert</strong></p>
+</li>
+<li>
+<p>Go to <strong>Search &amp; Reporting</strong> in the Splunk web interface.</p>
+</li>
+<li>Create a search query to identify the event you want to monitor (e.g., failed login attempts).</li>
+</ol>
+<div class="highlight"><pre><span></span><code>index=&quot;django-logs&quot; sourcetype=&quot;django&quot; &quot;Failed login&quot;
+</code></pre></div>
+<ol>
+<li>
+<p><strong>Save the Search as an Alert</strong></p>
+</li>
+<li>
+<p>Save the search and configure the alert settings.</p>
+</li>
+<li>Specify the trigger conditions and the alert actions (e.g., send an email, trigger a webhook).</li>
+</ol>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>Integrating your Django application with a SIEM system enhances your security posture by providing centralized logging, real-time monitoring, and automated incident response. By leveraging SIEM tools, you can detect and respond to security threats more effectively, ensuring the safety and reliability of your web application.</p>
 
 
 
@@ -1552,10 +1644,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "search.highlight", "search.suggest", "content.code.annotate", "content.tabs.link", "navigation.expand", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
     
   </body>
