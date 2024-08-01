@@ -3,6 +3,10 @@ site_description: Comprehensive documentation on web security using Django
 site_author: Domenez-dev
 site_url: https://domenez-dev.github.io/build-a-secure-web-application-using-django/
 
+repo_url: https://github.com/Domenez-dev/build-a-secure-web-application-using-django
+repo_name: Build-a-secure-web-application-using-django
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   palette:
@@ -26,6 +30,7 @@ theme:
   features:
     # - navigation.tabs
     - navigation.top
+    - navigation.footer
     - search.highlight
     - search.suggest
     # - toc.integrate
@@ -93,3 +98,16 @@ markdown_extensions:
   - codehilite
   - pymdownx.superfences
   - pymdownx.details
+
+extra:
+  social:
+    - icon: material/github
+      link: https://github.com/domenez-dev
+    - icon: material/instagram
+      link: https://instagram.com/domenez_dev
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/bouzara-zakaria/
+    - icon: fontawesome/brands/dribbble
+      link: https://dribbble.com/Domenez
+
+copyright: Copyright &copy; 2024 MIT Licence
