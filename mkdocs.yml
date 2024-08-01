@@ -1,7 +1,7 @@
 site_name: Web Security Using Django
 site_description: Comprehensive documentation on web security using Django
-site_author: Domenez25
-site_url: https://github.com/Domenez25/secure-web-application-using-django
+site_author: Domenez-dev
+site_url: https://domenez-dev.github.io/build-a-secure-web-application-using-django/
 
 theme:
   name: material
@@ -21,7 +21,7 @@ theme:
   font:
     text: "Roboto"
     code: "Roboto Mono"
-  logo: "images/logo.png"
+  logo: "images/logo.jpg"
   favicon: "images/favicon.ico"
   features:
     # - navigation.tabs

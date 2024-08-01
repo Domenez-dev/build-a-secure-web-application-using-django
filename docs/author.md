@@ -18,10 +18,10 @@ Hello! I'm BOUZARA Zakaria, a network engineer, a passionate web developer and a
 
 ## Contact
 
-- **Email**: [bouzara.zakaria.25@gmail.com](bouzara.zakaria.25@gmail.com)
-- **GitHub**: [github.com/Domenez25](https://github.com/Domenez25)
-- **LinkedIn**: [https://www.linkedin.com/in/bouzara-zakaria](https://www.linkedin.com/in/bouzara-zakaria-4a103627a/)
-
+- **Email**: [bouzara.zakaria.25@gmail.com](mailto:bouzara.zakaria.25@gmail.com)
+- **GitHub**: [github.com/Domenez-dev](https://github.com/Domenez-dev)
+- **LinkedIn**: [in/bouzara-zakaria](https://www.linkedin.com/in/bouzara-zakaria-4a103627a/)
+- **instagram**: [ig.com/domenez_dev/](https://www.instagram.com/domenez_dev/)
 ## Conclusion
 
 Thank you for taking the time to read this documentation. I hope it provides valuable insights into securing your Django applications. Feel free to reach out if you have any questions or need further assistance.

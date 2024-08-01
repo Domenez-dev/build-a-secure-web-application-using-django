@@ -25,7 +25,7 @@ In this documentation, you will learn about:
 
 Dive into the documentation by exploring the following sections:
 
-- [Introduction to Web Security](introduction/)
-- [Django Security Features](django-security/sql-injection/)
-- [Best Practices in Django](best-practices/general-security-practices/)
-- [Advanced Security Techniques](advanced-techniques/custom-middleware-security/)
+- [Introduction to Web Security](introduction.md)
+- [Django Security Features](django-security/sql-injection.md)
+- [Best Practices in Django](best-practices/general-security-practices.md)
+- [Advanced Security Techniques](advanced-techniques/custom-middleware-security.md)
